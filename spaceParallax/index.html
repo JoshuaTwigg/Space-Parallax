@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <div id="scrollContainer">
+    <header id="mainBack">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>             
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <h1 id="mainText">VENTURE</h1>      
+          <h2 id="mainText2">Lorem ipsum lorem ipsum <br></br> </h2>    
+          
+          <div>
+            <img id="imgOne" src="./mars.png">
+            <img id="imgTwo" src="./floor2.png">
+            <img id="imgThree" src="./rock.png">
+            <img id="imgThreeB" src="./rock.png">
+            <img id="imgThreeC" src="./rock.png">
+            <img id="imgThreeD" src="./rock.png">
+            <!-- <img id="person" src="./person.png"> -->
+        </div>
+    </header>
+
+    <article id="astroBack">
+      <div>
+        <h1 id="mainText">GO BEYOND</h1>       
+        <img id="imgFour" src="./astro.png">
+        <div id="glass">
+            
+        </div>
+      
+      </div>
+
+    </article>
+
+    <article id="extraBack">
+      <h1 id="mainText">GOETH </h1>  
+      
+      <img id="imgFive" src="./rea.png">
+      <h2 id="mainText3">Lorem ipsum lorem<br></br> 
+    </article>
+
+  </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script >
+              let pos = window.scrollY
+              console.log(pos)
+       console.log("hi")
+       window.addEventListener("scroll",(e)=>{ //DOMContentLoaded
+        //"DOMContentLoaded" then it will probs work
+        //"scroll"
+        // window.scrollY;
+        //  window.onscroll = function() {}
+         
+          let scroll = pageYOffset // amount user has scrolled in pixels
+          let pos = window.scrollY
+          console.log(pos)
+       
+          console.log(scroll)
+        
+
+          let mouseMove = ()=>{
+            window.addEventListener("mousemove",(e)=>{
+              //move mars when u move mouse left to right
+              let mouse = e.pageX/12;
+              let width = window.innerWidth
+
+              if(width < width/50*100 && scroll <250){
+                let mars = document.getElementById("imgOne")
+                var translateX = mouse + 'px';
+                 // Apply translation to the element
+               mars.style.transform = 'translate(' + translateX + ')';
+
+              }else{
+                let mars = document.getElementById("imgOne")
+                mars.style.transform = 'translate(' + -translateX + ')';
+              }
+              
+              
+                
+            })
+
+          }
+          
+          mouseMove()
+
+          let slide1 = ()=>{
+            let mainBack = document.getElementById("mainBack") 
+            let mars = document.getElementById("imgOne")
+            let floor = document.getElementById("imgTwo")
+            let roid1 = document.getElementById("imgThree")
+            let roid2 = document.getElementById("imgThreeB")
+            let roid3 = document.getElementById("imgThreeC")
+            let roid4 = document.getElementById("imgThreeD")
+
+            // mainBack.classList.add("mainBack2")         //change linear gradient
+
+            mars.style.transform = "scale(1.03,1.03) rotate(1deg)";
+            floor.style.transform = "scale(1,1.05)";
+            roid1.style.transform = "scale(1.09,1.09) rotate(-64deg)"; // some hover some move
+            roid2.style.transform = "scale(1.09,1.09) rotate(6deg)";
+            roid3.style.transform = "scale(1.09,1.09) rotate(6deg)";
+            roid4.style.transform = "scale(1.02,1.07) rotate(6deg)";
+          }
+
+          let slide2 = ()=>{
+            let astro = document.getElementById("imgFour")
+            let astroBack = document.getElementById("astroBack")
+
+            if(scroll>250){
+                astro.classList.add();
+                astroBack.classList.add('x');
+          }else{
+            astro.classList.remove();
+                astroBack.classList.remove('x');
+          }
+        
+
+            astro.style.transform = "scale(1.09,1.09) rotate(6deg)";
+            astroBack.style.backgroundSize = "110%";
+
+            // astroBack.style.transform = "scale(1.10,1.10)";
+            
+            // astro.style.transform = "rotate(5deg)";
+            //to keep it expanding breathing animation, probs need animationframes
+            // or just do a max that it reaches if scroll else remove when drops below so it continues //could also do if it reaches max, go back down
+            
+          }
+
+          let slide3 = ()=>{
+            console.log("dagagdgdagdagdagda")
+              let z = document.getElementById("imgFive");
+              z.classList.add('imgFivee');
+          }
+
+          if(scroll >1350){
+              slide3();
+              console.log("gda")
+          }
+
+          if(scroll <250){
+              slide1();
+          }
+
+          if(scroll > 250){
+              slide2();
+          }
+
+          
+
+       
+
+       })
+       
+    </script>
+  
+</body>
+</html>

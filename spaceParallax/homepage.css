@@ -1,0 +1,224 @@
+body{
+   font-family:Arial, Helvetica, sans-serif!important;
+   margin: 0 !important;
+   overflow-x: hidden !important;
+}
+
+#scrollContainer{
+    scroll-behavior:smooth;
+    scroll-snap-type: y mandatory; 
+    height:100vh;
+    /* overflow-y: scroll;         */
+    
+    /*overflow-y:scroll ESSENTIAL and  scroll-snap-align: start; if it doesnt work or buggy delete parts of html to see what html is causing the issue /*/
+    /*/its great that overflow-y also breaks any js animations so idk how to fix that something very wrong cause it wont conoslelog but does in test file*/
+    /*/its not listening for "scroll thats whats happening!!!"*/
+}
+
+#mainBack{
+    background:linear-gradient(#94ebfebd,rgb(255, 160, 160));
+    width:100%;
+    height:100vh;
+    background-size: 100% 100%;
+    position: relative;
+    transition: 5000ms;
+    transition: ease-in-out;
+    scroll-snap-align: start;
+}
+
+.mainBack2{
+    background:linear-gradient(#94ebfebd,rgb(255, 221, 154)) !important;
+    width:100%;
+    height:100vh;
+    background-size: 100% 100%;
+    position: relative;
+    transition: 5000ms;
+    transition: ease-in-out;
+    scroll-snap-align: start;
+}
+
+.nav-item{
+    font-size: 25px !important;
+}
+
+.nav-item a{
+   
+    color:white !important
+}
+
+#mainText{
+    font-size: 120px;
+    color: white;
+    position: absolute;
+    top:260px;
+    left: 80px;
+    z-index: 9999;
+}
+
+
+#mainText2{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top:600px;
+    right:25%;
+    z-index: 9999;
+}
+
+#mainText3{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top:600px;
+    left:0%;
+    z-index: 9999;
+}
+
+#imgOne{
+    position: absolute;
+    width:500px;
+    height: 500px;
+    top:10%;
+    left:35%;
+    transition: 5000ms;
+}
+
+#imgTwo{
+    position: absolute;
+    width:100%;
+    max-width: 100%;
+    height:1054px;
+    top:-100px;
+    
+    z-index: 999;
+    transition: 5000ms;
+}
+
+#imgThree{
+    position: absolute;
+    width:100px;
+    height: 100px;
+    top:10%;
+    left:35%;
+    transition: 5000ms;
+    transform: rotate(-20deg);
+    
+}
+
+#imgThreeB{
+    position: absolute;
+    width:300px;
+    height: 300px;
+    top:10%;
+    left:75%;
+    transition: 5000ms;
+    
+}
+
+
+#imgThreeC{
+    position: absolute;
+    width:800px;
+    height: 800px;
+    top:-10%;
+    left:0%;
+    transform: rotate(30deg);
+    transition: 5000ms;
+    
+}
+
+#imgThreeD{
+    position: absolute;
+    width:1500px;
+    height: 1500px;
+    top:10%;
+    left:15%;
+    transition: 5000ms;
+    
+}
+
+#person{
+    position: absolute;
+    width:800px;
+    height:800px;
+    top:25%;
+    left:25%;
+    z-index: 9999;
+}
+
+#imgFour{
+    position: absolute;
+    width:800px;
+    height: 800px;
+    top:20%;
+    left:45%;
+    transition: 10000ms;
+}
+
+#imgFive{
+    position: absolute;
+    width:500px;
+    height: 100%;
+    top:0%;
+    left:62%;
+    filter: drop-shadow(50px 50px);
+    transition:all 14s !important;
+}
+
+.imgFivee{
+    position: absolute;
+    width:500px !important;
+    height: 100% !important;
+    top:0%;
+    left:70% !important;
+    filter: drop-shadow(0px 0px) !important;
+    
+    transform: rotate(-2deg) !important;
+    
+}
+
+
+#astroBack{
+    background-image: url(pink2.jpg);
+    width:100%;
+  height:100vh;
+    background-size: 100% 100%;
+    position: relative;
+    
+
+    /* scroll-snap-align: start; */
+
+    transition:all 14s !important;
+}
+
+
+.x{
+    width:100%;
+    height:100vh;
+    background-image: url(pink2.jpg);
+    background-size: 100% 100%;
+    background-position:-70px -70px;
+    transition:all 10s ;
+    
+
+}
+/*with this c..er astro background i cant get it to smoothly increase 100% to 110% but i can in mulitple other projects. thats life for you. /*/
+
+#glass{
+    width:50%;
+    height:800px;
+    border-radius: 25%;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: 99999;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+}
+
+#extraBack{
+    background:linear-gradient(rgb(215, 215, 215),rgb(255, 196, 88)) ;
+    width:100%;
+    height:100vh;
+    background-size: 100% 100%;
+    position: relative;
+    scroll-snap-align: start;
+}
